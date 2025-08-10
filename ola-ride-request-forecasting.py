@@ -89,7 +89,6 @@ df.head()
 # In[135]:
 
 
-get_ipython().system('pip install holidays')
 
 
 # In[136]:

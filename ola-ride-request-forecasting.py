@@ -19,13 +19,15 @@ warnings.filterwarnings('ignore') #filters out warnings that come with the word 
 
 from datetime import datetime
 
+MAX_WIND_SPEED = 32  
+MIN_HUMIDITY = 0 
 
 # In[130]:
 
 
 #reading the ola data
 
-df = pd.read_csv(r'C:\Users\Jackson Jesse\Desktop\everything\Sem 5\MLOps\ML\Ola ride request forecasting\ola.csv') #use raw string 'r' while entering file paths
+df = pd.read_csv('ola.csv') #use raw string 'r' while entering file paths
 df.head()
 
 
@@ -89,7 +91,6 @@ df.head()
 # In[135]:
 
 
-get_ipython().system('pip install holidays')
 
 
 # In[136]:
@@ -166,7 +167,7 @@ plt.show()
 
 
 # number of rows that will be lost if we remove the utliers
-df.shape[0] - df[df['windspeed']<32].shape[0]
+df = df[(df['windspeed'] < MAX_WIND_SPEED) & (df['humidity'] > MIN_HUMIDITY)]
 
 
 # In[145]:

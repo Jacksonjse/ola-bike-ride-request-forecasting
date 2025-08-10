@@ -23,9 +23,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+<<<<<<< HEAD
       
   
       - name: Run tests
         run: |
           pytest
         
+=======
+      - name: Run Training and Tests
+        run: |
+          python ola-ride-request-forecasting.py
+>>>>>>> 3aa2235020c5777a7d49eaf58114fcccb8f39cb2

@@ -25,7 +25,7 @@ from datetime import datetime
 
 #reading the ola data
 
-df = pd.read_csv(r'C:\Users\Jackson Jesse\Desktop\everything\Sem 5\MLOps\ML\Ola ride request forecasting\ola.csv') #use raw string 'r' while entering file paths
+df = pd.read_csv('ola.csv') #use raw string 'r' while entering file paths
 df.head()
 
 
